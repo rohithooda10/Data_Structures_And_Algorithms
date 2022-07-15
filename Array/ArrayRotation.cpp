@@ -1,5 +1,5 @@
 //Array rotation
-/* Approach : Divide the array into sets(=gcd(n,k)) and do the swapping of array[i] with array[i+k] */
+// Approach : Divide the array into sets(=gcd(n,k)) and do the swapping of array[i] with array[i+k] */
 //Complexity: Time = O(n), Space = O(1)
 //Code :
 
