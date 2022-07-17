@@ -1,15 +1,17 @@
 //Grid uniquePaths
 //Approach - Recursive
+//Code:
+
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
 
-int uniquePaths(int l,int h,int rows,int cols)
+int uniquePaths(int i,int j,int rows,int cols)
 {
-    if(l==rows-1 && h==cols-1)    return 1;
-    else if(l>=rows || h>=cols)   return 0;
+    if(i==rows-1 && j==cols-1)    return 1;
+    else if(i>=rows || j>=cols)   return 0;
     else
-        return uniquePaths(l,h+1,rows,cols) + uniquePaths(l+1,h,rows,cols);
+        return uniquePaths(i,j+1,rows,cols) + uniquePaths(i+1,j,rows,cols);
 }
 
 int main()
