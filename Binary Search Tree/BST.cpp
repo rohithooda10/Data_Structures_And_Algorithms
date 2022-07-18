@@ -85,12 +85,26 @@ int minValue(struct Node* root)
         return root->val;
 }
 
+int maxDepth(struct Node* root)
+{
+    if(root==NULL)
+        return -1;
+    int left = 1+ maxDepth(root->left);
+    int right = 1+ maxDepth(root->right);
+    return left>right?left:right;
+        
+}
+
 int main()
 {
-    struct Node* root = new Node(2);
-    root = insert(root,1);
-    root = insert(root,4);
+    struct Node* root = new Node(8);
+    root = insert(root,6);
+    root = insert(root,10);
+    root = insert(root,2);
+    root = insert(root,11);
     root = insert(root,7);
+    root = insert(root,1);
+    
     cout<<"Inorder:"<<endl;
     inorder(root);
     cout<<endl<<"Preorder:"<<endl;
@@ -103,5 +117,6 @@ int main()
     else
         cout<<endl<<"Element not found";
     cout<<endl<<"Minimum value:"<<minValue(root);
+    cout<<endl<<"Maximum depth:"<<maxDepth(root);
     return 0;
 }
