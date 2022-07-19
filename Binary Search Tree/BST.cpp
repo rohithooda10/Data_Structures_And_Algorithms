@@ -1,4 +1,4 @@
-//BST - Insert, Deletion, Search, Traversal, Minimum value
+//BST - Insert, Deletion, Search, Traversals, Minimum value
 //Code:
 #include <iostream>
 #include <bits/stdc++.h>
