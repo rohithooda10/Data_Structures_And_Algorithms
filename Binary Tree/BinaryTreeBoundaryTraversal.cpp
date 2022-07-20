@@ -78,8 +78,8 @@ void addRightBoundary(struct Node* root)
             root=root->left;
         }
     }
-    
-    for(int i=0;i<rightBorder.size()-1;i++)
+    int t = rightBorder.size();
+    for(int i=0;i<t-1;i++)
     {
         result.push_back(rightBorder[i]);
     }
