@@ -73,7 +73,6 @@ void topView(struct Node* root,int horizontal)
 
 int main()
 {
-    int level=0;
     struct Node* root = new Node(25);
     root = insert(root,22);
     root = insert(root,29);
